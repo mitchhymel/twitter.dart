@@ -15,6 +15,7 @@ class Client extends oauth.Client {
       {Map<String, String> headers, body, Encoding encoding}) async {
     if (url is String) url = Uri.parse(url);
 
+    print('Twitter Url: ${url.toString()}');
     var request = new http.Request(method, url);
 
     if (headers != null) request.headers.addAll(headers);
